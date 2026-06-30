@@ -352,6 +352,7 @@ export const Index: React.FC<HeroSectionProps> = ({
 }) => {
   const insets = useSafeAreaInsets();
   const [activeFilter, setActiveFilter] = useState('All');
+  const [activeTab, setActiveTab] = useState('Home');
 
   return (
     <View style={{ flex: 1, backgroundColor: C.bg }}>
@@ -444,6 +445,7 @@ export const Index: React.FC<HeroSectionProps> = ({
         </View>
 
       </ScrollView>
+
     </View>
   );
 };

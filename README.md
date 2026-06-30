@@ -1,54 +1,32 @@
 # 📱 Expo NativeWind Template
 
-> 🚀 **Production-Ready Expo Starter Kit** - Mobile app template with 20+ pre-built UI components, TypeScript, NativeWind (Tailwind CSS), and platform-specific behaviors for iOS/Android.
+> **Production-Ready Expo Starter Kit** with 20+ pre-built UI components, TypeScript, NativeWind, and platform-specific behaviors for iOS/Android.
 
-[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/chvvkrishnakumar/expo-nativewind-template/releases)
-[![Expo](https://img.shields.io/badge/Expo-SDK_56-000.svg?style=flat&logo=expo)](https://expo.dev)
-[![React Native](https://img.shields.io/badge/React%20Native-0.79.6-61DAFB.svg?style=flat&logo=react)](https://reactnative.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org)
-[![NativeWind](https://img.shields.io/badge/NativeWind-v4-38B2AC.svg?style=flat)](https://www.nativewind.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Expo SDK 56](https://img.shields.io/badge/Expo-56-000.svg?style=flat&logo=expo)](https://expo.dev)
+[![React Native 0.85](https://img.shields.io/badge/React%20Native-0.85-61DAFB.svg?style=flat&logo=react)](https://reactnative.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org)
+[![NativeWind v4](https://img.shields.io/badge/NativeWind-v4-38B2AC.svg?style=flat)](https://www.nativewind.dev)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<p align="center">
-  <strong>20+ Pre-built UI Components • TypeScript • NativeWind • Expo Router • Dark Mode</strong>
-</p>
+**20+ Components • TypeScript • NativeWind • Expo Router • Dark Mode**
 
 ## 🎯 Why This Template?
 
-Stop building UI components from scratch! This Expo starter template comes with:
+Stop building UI components from scratch. This template includes everything you need to ship production-ready mobile apps faster:
 
-- ✅ **20+ Pre-built Components** - Buttons, Cards, Dialogs, Bottom Sheets, and more
-- ✅ **Platform-Specific UI** - Automatic iOS/Android adaptations
-- ✅ **Dark Mode Ready** - System-aware theme switching
-- ✅ **Permission Management** - Unified API for all device permissions
-- ✅ **TypeScript First** - Full type safety out of the box
-- ✅ **Production Ready** - Best practices and scalable architecture
-
-## 🌟 Perfect For
-
-- 📱 **Mobile App MVPs** - Launch faster with pre-built components
-- 🏢 **Enterprise Apps** - Scalable architecture and TypeScript safety
-- 🎨 **Design Systems** - Consistent UI across iOS and Android
-- 🚀 **Startups** - Focus on your business logic, not UI implementation
-
-## 🚀 Core Features
-
-- **🎨 Complete UI Component Library** - 20+ pre-built components with iOS/Android platform-specific behaviors
-- **🎯 TypeScript** - Full type safety and IntelliSense support
-- **💨 NativeWind** - Tailwind CSS for React Native with dark mode support
-- **📍 Expo Router** - File-based routing with typed navigation
-- **🔒 Permission Management** - Unified permission handling for camera, location, notifications, etc.
-- **📱 Platform-Specific Components** - Automatic iOS/Android adaptations
-- **🌙 Dark Mode** - Built-in theme support with automatic system detection
-- **♿ Accessibility** - WCAG compliant components with proper ARIA labels
+- **20+ Pre-built Components** — Buttons, Cards, Dialogs, Bottom Sheets, and more
+- **Platform-Specific UI** — Automatic iOS/Android adaptations  
+- **Dark Mode Ready** — System-aware theme switching
+- **Unified Permissions** — Single API for camera, location, notifications, etc.
+- **TypeScript First** — Full type safety and IntelliSense
+- **Production Ready** — Scalable architecture and best practices
 
 ## 📦 What's Included
 
 ### UI Components
-
 - **Layout**: SafeAreaView, ScrollView, KeyboardAvoidingView
-- **Typography**: Text with variants (h1-h6, p, lead, muted, code)
-- **Buttons**: Multiple variants (primary, secondary, destructive, outline, ghost, link)
+- **Typography**: Text variants (h1-h6, p, lead, muted, code)
+- **Buttons**: Primary, secondary, destructive, outline, ghost, link
 - **Forms**: Input, Label, Switch, Checkbox
 - **Feedback**: Dialog, Sheet (Bottom Sheet), Drawer
 - **Display**: Card, Badge
@@ -56,105 +34,64 @@ Stop building UI components from scratch! This Expo starter template comes with:
 - **Utilities**: Permission Requester, Theme Provider
 
 ### Demo Screens
+- **UI Showcase** (`/app/(tabs)/index.tsx`) — Interactive component gallery
+- **Menu Demo** (`/app/(tabs)/menu-demo.tsx`) — Hamburger menu examples
+- **Permissions Demo** (`/app/(tabs)/permissions-demo.tsx`) — Permission management UI
 
-1. **UI Showcase** (`/app/(tabs)/index.tsx`) - Interactive component gallery
-2. **Menu Demo** (`/app/(tabs)/menu-demo.tsx`) - Hamburger menu implementation
-3. **Permissions Demo** (`/app/(tabs)/permissions-demo.tsx`) - Permission management UI
+## 🚀 Quick Start
 
-## 🏗️ Project Structure
+```bash
+# Clone and install
+git clone https://github.com/chvvkrishnakumar/expo-nativewind-template.git my-app
+cd my-app
+npm install
+
+# Start development
+npx expo start
+
+# Run on device
+# Press 'i' for iOS, 'a' for Android, or scan QR with Expo Go
+```
+
+### Prerequisites
+- Node.js 18+ and npm/yarn
+- iOS Simulator (Mac) or Android Studio
+- Expo Go app on physical device (optional)
+
+## 📁 Project Structure
 
 ```
-├── app/                    # 📱 Expo Router screens
-│   ├── (tabs)/            # 📊 Tab navigation
+├── app/                    # Expo Router screens
+│   ├── (tabs)/            # Tab navigation
 │   │   ├── index.tsx      # Component showcase
 │   │   ├── menu-demo.tsx  # Menu examples
 │   │   └── permissions-demo.tsx # Permission examples
-│   └── _layout.tsx        # 🎨 Root layout
+│   └── _layout.tsx        # Root layout
 ├── components/            
-│   ├── ui/                # 🎨 UI component library (20+ components)
-│   └── error-boundary/    # Error handling components
-├── hooks/                 # 🪝 Custom React hooks
-├── constants/             # 📌 App constants & colors
-├── config/                # ⚙️ App configuration
-├── assets/                # 🖼️ Images, fonts, etc.
+│   ├── ui/                # UI component library (20+ components)
+│   └── error-boundary/    # Error handling
+├── hooks/                 # Custom React hooks
+├── constants/             # App constants & colors
+└── assets/                # Images, fonts, etc.
 ```
 
-## ⚠️ Important Notes
+## ⚠️ Development Build Required
 
-### Expo Go Limitations
 Some features require a development build instead of Expo Go:
-- **Push Notifications** - Requires development build (SDK 56+)
-- **Camera** - May have limited functionality
-- **Other native modules** - Some features work better in dev builds
 
-To create a development build:
+- **Push Notifications** — Requires development build (SDK 56+)
+- **Camera** — May have limited functionality in Expo Go
+- **Other native modules** — Work better in dev builds
+
+Create a development build:
 ```bash
 npx eas build --profile development --platform ios
 npx eas build --profile development --platform android
 ```
 
-## 🛠️ Getting Started
+## 💡 Usage
 
-### Prerequisites
-
-- Node.js 18+ and npm/yarn
-- iOS Simulator (Mac only) or Android Studio
-- Expo Go app on your physical device (optional)
-
-### Installation
-
-1. **Clone the template**
-   ```bash
-   git clone https://github.com/chvvkrishnakumar/expo-nativewind-template.git my-app
-   cd my-app
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npx expo start
-   ```
-
-4. **Run on your device**
-   - Press `i` for iOS simulator
-   - Press `a` for Android emulator
-   - Scan QR code with Expo Go app
-
-## 📁 Project Structure
-
-```
-expo-nativewind-template/
-├── app/                    # App routes (Expo Router)
-│   ├── (tabs)/            # Tab navigation screens
-│   │   ├── _layout.tsx    # Tab layout configuration
-│   │   ├── index.tsx      # UI component showcase
-│   │   ├── menu-demo.tsx  # Hamburger menu demo
-│   │   └── permissions-demo.tsx # Permissions demo
-│   ├── _layout.tsx        # Root layout with providers
-│   └── +not-found.tsx     # 404 screen
-├── components/            
-│   └── ui/                # UI component library
-│       ├── button.tsx     
-│       ├── card.tsx
-│       ├── dialog.tsx
-│       ├── sheet.tsx
-│       ├── theme.tsx      # Theme provider
-│       └── ...            # Other components
-├── assets/                # Images, fonts, etc.
-├── hooks/                 # Custom React hooks
-├── constants/             # App constants
-└── package.json
-```
-
-## 🎨 Using Components
-
-### Basic Example
+### Basic Component Example
 
 ```tsx
 import { Button, Text, Card, SafeAreaView } from '@/components/ui';
@@ -173,9 +110,9 @@ export default function MyScreen() {
 }
 ```
 
-### Platform-Specific Components
+### Platform-Specific Behavior
 
-Components automatically adapt to the platform:
+Components automatically adapt to iOS/Android:
 
 ```tsx
 // Button uses TouchableOpacity on iOS, Pressable with ripple on Android
@@ -183,7 +120,7 @@ Components automatically adapt to the platform:
   <Text>Platform Adaptive Button</Text>
 </Button>
 
-// Dialog animations differ by platform
+// Dialog animations differ by platform  
 <Dialog open={open} onOpenChange={setOpen}>
   <DialogContent>
     {/* iOS: slide animation, Android: fade animation */}
@@ -194,9 +131,8 @@ Components automatically adapt to the platform:
 ### Permission Handling
 
 ```tsx
-import { PermissionRequester, useCameraPermissions } from '@/components/ui';
+import { PermissionRequester } from '@/components/ui';
 
-// Using the component
 <PermissionRequester permission="location">
   {({ status, requestPermission }) => (
     <Button onPress={requestPermission}>
@@ -204,14 +140,9 @@ import { PermissionRequester, useCameraPermissions } from '@/components/ui';
     </Button>
   )}
 </PermissionRequester>
-
-// Using the hook for camera (special case)
-const [permission, requestPermission] = useCameraPermissions();
 ```
 
-## 🎨 Styling with NativeWind
-
-This template uses NativeWind (Tailwind for React Native):
+### NativeWind Styling
 
 ```tsx
 // Using className for styling
@@ -238,13 +169,11 @@ Edit `global.css` to customize your theme:
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --primary: 221.2 83.2% 53.3%;
-    /* ... other colors */
   }
   
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    /* ... dark mode colors */
   }
 }
 ```
@@ -255,9 +184,7 @@ Edit `global.css` to customize your theme:
 2. Export from `/components/ui/index.ts`
 3. Follow existing patterns for platform-specific behavior
 
-## 📱 Platform-Specific Files
-
-For platform-specific implementations:
+### Platform-Specific Files
 
 ```
 components/ui/
@@ -266,130 +193,89 @@ components/ui/
 └── button.android.tsx  # Android specific (optional)
 ```
 
-## 🚀 Building for Production
+## 🏗️ Building for Production
 
-### Development Build
 ```bash
-# iOS
-eas build --platform ios --profile development
+# Development builds
+npx eas build --platform ios --profile development
+npx eas build --platform android --profile development
 
-# Android  
-eas build --platform android --profile development
+# Production builds
+npx eas build --platform ios --profile production
+npx eas build --platform android --profile production
 ```
 
-### Production Build
-```bash
-# iOS
-eas build --platform ios --profile production
+## 📚 Tech Stack
 
-# Android
-eas build --platform android --profile production
-```
+**Core**
+- [Expo SDK 56](https://expo.dev) — React Native framework
+- [React Native 0.85](https://reactnative.dev) — Mobile framework
+- [TypeScript 6.0](https://www.typescriptlang.org) — Type safety
+- [Expo Router](https://expo.github.io/router) — File-based routing
+- [NativeWind v4](https://www.nativewind.dev) — Tailwind for React Native
 
-## 📚 Tech Stack & Resources
+**UI & Animations**
+- [@gorhom/bottom-sheet](https://gorhom.dev/react-native-bottom-sheet/) — Bottom sheets
+- [react-native-gesture-handler](https://docs.swmansion.com/react-native-gesture-handler/) — Gestures
+- [react-native-reanimated](https://docs.swmansion.com/react-native-reanimated/) — Animations
+- [lucide-react-native](https://lucide.dev) — Icon library
+- [class-variance-authority](https://cva.style) — Component variants
 
-### Core Libraries
-
-| Library | Version | Description | Documentation |
-|---------|---------|-------------|--------------|
-| [Expo SDK](https://expo.dev) | ~53.0.0 | React Native framework | [Docs](https://docs.expo.dev/) |
-| [React Native](https://reactnative.dev) | 0.74.5 | Mobile framework | [Docs](https://reactnative.dev/docs/getting-started) |
-| [TypeScript](https://www.typescriptlang.org) | ^5.3.3 | Type safety | [Docs](https://www.typescriptlang.org/docs/) |
-| [Expo Router](https://expo.github.io/router) | ~3.5.23 | File-based routing | [Docs](https://docs.expo.dev/router/introduction/) |
-| [NativeWind](https://www.nativewind.dev) | ^4.0.0 | Tailwind for RN | [Docs](https://www.nativewind.dev/v4/overview) |
-
-### UI Libraries
-
-| Library | Purpose | Documentation |
-|---------|---------|---------------|
-| [@gorhom/bottom-sheet](https://github.com/gorhom/react-native-bottom-sheet) | Bottom sheets | [Docs](https://gorhom.dev/react-native-bottom-sheet/) |
-| [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler) | Gesture handling | [Docs](https://docs.swmansion.com/react-native-gesture-handler/) |
-| [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated) | Animations | [Docs](https://docs.swmansion.com/react-native-reanimated/) |
-| [lucide-react-native](https://lucide.dev) | Icon library | [Icons](https://lucide.dev/icons/) |
-| [class-variance-authority](https://cva.style) | Component variants | [Docs](https://cva.style/docs) |
-
-### Permission Libraries
-
-| Library | Purpose | Documentation |
-|---------|---------|---------------|
-| [expo-camera](https://docs.expo.dev/versions/latest/sdk/camera/) | Camera access | [API](https://docs.expo.dev/versions/latest/sdk/camera/) |
-| [expo-location](https://docs.expo.dev/versions/latest/sdk/location/) | Location services | [API](https://docs.expo.dev/versions/latest/sdk/location/) |
-| [expo-media-library](https://docs.expo.dev/versions/latest/sdk/media-library/) | Photo library | [API](https://docs.expo.dev/versions/latest/sdk/media-library/) |
-| [expo-notifications](https://docs.expo.dev/versions/latest/sdk/notifications/) | Push notifications | [API](https://docs.expo.dev/versions/latest/sdk/notifications/) |
-| [expo-contacts](https://docs.expo.dev/versions/latest/sdk/contacts/) | Contacts access | [API](https://docs.expo.dev/versions/latest/sdk/contacts/) |
+**Permissions**
+- expo-camera, expo-location, expo-media-library
+- expo-notifications, expo-contacts
 
 
-## 🤔 Frequently Asked Questions
+## 🤔 FAQ
 
 <details>
 <summary><b>Can I use this template for commercial projects?</b></summary>
 
-Yes! This template is MIT licensed, meaning you can use it for commercial projects, modify it, and distribute it.
+Yes! MIT licensed — free for commercial use, modification, and distribution.
 </details>
 
 <details>
-<summary><b>How do I add custom colors to the theme?</b></summary>
+<summary><b>How do I add custom colors?</b></summary>
 
-Edit the `global.css` file and add your custom colors to the `:root` and `.dark` selectors. NativeWind will automatically generate the utility classes.
+Edit `global.css` and add colors to `:root` and `.dark` selectors. NativeWind automatically generates utility classes.
 </details>
 
 <details>
-<summary><b>Do the components support iPad/tablets?</b></summary>
+<summary><b>Do components work on tablets/iPad?</b></summary>
 
-Yes, the components are responsive and work on tablets. You may want to adjust some layouts for larger screens using responsive utilities.
+Yes, components are responsive. Adjust layouts for larger screens using responsive utilities.
 </details>
 
 <details>
-<summary><b>Can I use this with React Native CLI instead of Expo?</b></summary>
+<summary><b>Can I use React Native CLI instead of Expo?</b></summary>
 
-While this template is optimized for Expo, most components will work with React Native CLI. You'll need to replace Expo-specific packages with their React Native equivalents.
+Most components will work, but you'll need to replace Expo-specific packages with React Native equivalents.
 </details>
-
-## 🌟 Show Your Support
-
-If this template helps you build your app faster, please consider:
-
-- ⭐ Starring the repository
-- 🐦 Sharing it on Twitter
-- 💬 Leaving feedback in Issues
-- 🤝 Contributing improvements
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Contributing Guidelines
+Contributions welcome! For major changes, please open an issue first.
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🏷️ Version
-
-Current version: **0.1.0** - See [CHANGELOG.md](CHANGELOG.md) for version history.
+MIT License — see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-- [Expo Team](https://expo.dev) for the amazing framework
-- [NativeWind Team](https://nativewind.dev) for bringing Tailwind to React Native
-- [Gorhom](https://gorhom.dev) for the bottom sheet library
-- [Software Mansion](https://swmansion.com) for gesture handler and reanimated
-- All contributors who help improve this template
+- [Expo](https://expo.dev) — Amazing framework
+- [NativeWind](https://nativewind.dev) — Tailwind for React Native
+- [Gorhom](https://gorhom.dev) — Bottom sheet library
+- [Software Mansion](https://swmansion.com) — Gesture handler & Reanimated
+- All contributors
 
 ---
 
-<p align="center">
-  <b>Built with ❤️ for the React Native community</b>
-  <br>
-  <sub>If you found this helpful, please ⭐ the repository!</sub>
-</p>
+**Built with ❤️ for the React Native community**
 
-<p align="center">
-  <a href="#-expo-react-native-starter-template-with-ui-components">Back to top ⬆️</a>
-</p>
+If this helps you build faster, please ⭐ the repository!

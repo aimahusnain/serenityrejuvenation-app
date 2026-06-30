@@ -1,13 +1,13 @@
+import { icon } from "@/constants/icon";
 import type { BottomTabBarProps } from "expo-router/tabs";
 import React, { useState } from "react";
 import { LayoutChangeEvent, StyleSheet, View } from "react-native";
-import TabBarButton from "./TabBarButton";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import { icon } from "@/constants/icon";
+import TabBarButton from "./TabBarButton";
 
 export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const [dimensions, setDimensions] = useState({ height: 20, width: 100 });
@@ -53,8 +53,8 @@ export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 
         const onPress = () => {
           tabPositionX.value = withSpring(buttonWidth * index, {
-            duration: 750,
-            dampingRatio: 0.65,
+            duration: 400,
+            dampingRatio: 0.8,
           });
           const event = navigation.emit({
             type: "tabPress",
@@ -98,8 +98,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#23001e",
-    marginHorizontal: 60,
-    paddingVertical: 15,
+    marginHorizontal: 20,
+    paddingVertical: 5,
     // paddingHorizontal: 10,
     borderRadius: 35,
     shadowColor: "#000",

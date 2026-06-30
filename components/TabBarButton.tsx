@@ -1,6 +1,6 @@
 import { icon } from "@/constants/icon";
 import React, { useEffect } from "react";
-import { Pressable, StyleSheet } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -28,17 +28,20 @@ const TabBarButton = ({
   const scale = useSharedValue(0);
 
   useEffect(() => {
-    scale.value = withSpring(isFocused ? 1 : 0);
+    scale.value = withSpring(isFocused ? 1 : 0, {
+      duration: 300,
+      dampingRatio: 0.8,
+    });
   }, [isFocused]);
 
   const animatedIconStyle = useAnimatedStyle(() => {
     return {
       transform: [
         {
-          scale: interpolate(scale.value, [0, 1], [1, 1.2]),
+          scale: interpolate(scale.value, [0, 1], [1, 1.4]),
         },
       ],
-      top: interpolate(scale.value, [0, 1], [0, 9]),
+      marginTop: interpolate(scale.value, [0, 1], [0, 15]),
     };
   });
 
@@ -48,26 +51,18 @@ const TabBarButton = ({
     };
   });
 
-  return (
-    <Pressable
-      onPress={onPress}
-      onLongPress={onLongPress}
-      style={styles.tabbarItem}
-    >
-      <Animated.View style={animatedIconStyle}>
-        {icon[routeName]({
-          color,
-          size: 24,
-        })}
-      </Animated.View>
+  const IconComponent = icon[routeName] || ((props: any) => null);
 
+  return (
+    <Pressable onPress={onPress} onLongPress={onLongPress} style={styles.tabbarItem}>
+      <Animated.View style={animatedIconStyle}>
+        <View style={{ alignItems: 'center' }}>
+          {IconComponent({ color, size: 24 })}
+        </View>
+      </Animated.View>
       <Animated.Text
         style={[
-          {
-            color,
-            fontSize: 12,
-            marginTop: 4,
-          },
+          { color, fontSize: 12, marginTop: 4 },
           animatedTextStyle,
         ]}
       >
